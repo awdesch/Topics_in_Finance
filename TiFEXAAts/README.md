@@ -4,7 +4,7 @@
 
 
 ```yaml
-Name of Quantlet: FiFEXAAts 
+Name of Quantlet: TiFEXAAts 
 
 Published in: Topics in Finance  
 
