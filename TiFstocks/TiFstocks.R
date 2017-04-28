@@ -20,16 +20,10 @@ lapply(libraries, library, quietly = TRUE, character.only = TRUE)
 # MSI (Motorola Solutions)
 start = "2005-01-01"
 end   = Sys.Date()
-getSymbols("GOOG", src="yahoo", from=start, to=end)
-getSymbols("XOM",  src="yahoo", from=start, to=end)
-getSymbols("GE",   src="yahoo", from=start, to=end)
-getSymbols("KO",   src="yahoo", from=start, to=end)
-getSymbols("F",    src="yahoo", from=start, to=end)
-getSymbols("GS",   src="yahoo", from=start, to=end)
-getSymbols("AIG",  src="yahoo", from=start, to=end)
-getSymbols("HPQ",  src="yahoo", from=start, to=end)
-getSymbols("WMT",  src="yahoo", from=start, to=end)
-getSymbols("MSI",  src="yahoo", from=start, to=end)
+
+tickers = c("GOOG", "XOM", "GE", "KO", "F", "GS", "AIG", "HPQ", "WMT", "MSI")
+
+getSymbols(tickers, src="yahoo", from=start, to=end)
 
 dygraph(MSI$MSI.Close)
 
