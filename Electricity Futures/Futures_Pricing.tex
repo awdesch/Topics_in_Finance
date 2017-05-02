@@ -1,0 +1,773 @@
+% Type of the document
+\documentclass{beamer}
+
+% elementary packages:
+\usepackage{graphicx}
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{mathrsfs}
+\usepackage{url}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{booktabs}
+
+% additional packages
+\usepackage{bbm}
+
+% packages supplied with ise-beamer:
+\usepackage{cooltooltips}
+\usepackage{colordef}
+\usepackage{beamerdefs}
+\usepackage{lvblisting}
+
+\def\defeq{\stackrel{\mathrm{def}}{=}}
+\def\trans{\top}
+\def\E{\mbox{E}}
+\def\P{\mbox{P}}
+\def\Var{\mbox{Var}}
+\def\sign{\mathop{\textsf{sign}}}
+\def\abs{\mathop{\textsf{abs}}}
+\def\cov{\mbox{Cov}}
+\def\Cov{\mbox{Cov}}
+\def\Corr{\mbox{Corr}}
+
+
+
+% Change the pictures here:
+% logobig and logosmall are the internal names for the pictures: do not modify them. 
+% Pictures must be supplied as JPEG, PNG or, to be preferred, PDF
+\pgfdeclareimage[height=2cm]{logobig}{hulogo}
+% Supply the correct logo for your class and change the file name to "logo". The logo will appear in the lower
+% right corner:
+\pgfdeclareimage[height=0.7cm]{logosmall}{hulogo}
+
+% Title page outline:
+% use this number to modify the scaling of the headline on title page
+\renewcommand{\titlescale}{1.0}
+% the title page has two columns, the following two values determine the percentage each one should get
+\renewcommand{\titlescale}{1.0}
+\renewcommand{\leftcol}{0.6}
+
+% Define the title.Don't forget to insert an abbreviation instead 
+% of "title for footer". It will appear in the lower left corner:
+\title[Futures pricing in electricity markets]{Futures pricing in electricity markets}
+% Define the authors:
+\authora{based on Benth et al. (2014)} % a-c
+\authorb{\;}
+\authorc{Awdesch Melzer}
+
+% Define any internet addresses, if you want to display them on the title page:
+\def\linka{https://www.wiwi.hu-berlin.de/en/professuren/bwl/finanz/}
+\def\linkb{}
+\def\linkc{}
+% Define the institute:
+\institute{Institute of Finance \\
+Humboldt-Universität zu Berlin \\}
+
+% Comment the following command, if you don't want, that the pdf file starts in full screen mode:
+\hypersetup{pdfpagemode=FullScreen}
+
+%Start of the document
+\begin{document}
+
+% create the title slide, layout controlled in beamerdefs.sty and the foregoing specifications
+\frame[plain]{
+\titlepage
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\thispagestyle{empty}
+\frame{
+	\frametitle{Agenda}
+	
+	\begin{enumerate}
+		\item Energy Markets
+		\begin{itemize}
+			\item History
+			\item Spot Markets
+			\item Economics of Spot Prices
+			\item Futures Market
+		\end{itemize}
+		\item Electricity Derivative Pricing
+		\begin{itemize}
+			\item Classical Theory
+			\item Spread Options
+			\item Caps and Floors
+			\item Swing Options
+		\end{itemize}
+	\end{enumerate}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{History}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+\frametitle{Pre-Liberalisation}
+Liberalisation of the German electricity market started in April 1998\\
+\bigskip
+Before liberalisation: system based on calculatory costs, prices according to `cost-plus' rule
+\begin{itemize}
+	\item Integrated value-chain: production, grid, distribution
+	\item Electricity production to secure supply within a regional monopole
+	\item Long-term supply contracts
+	\item No liquid market on the whole sale market
+	\item Regulated consumer prices, regulated investments
+\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Post-Liberalisation}
+	System is market based: higher volatility of prices, flexibility\\
+	\bigskip
+	\begin{itemize}
+		\item Unbundling of value-chain
+		\item Power plants are used optimally (no oblication to secure supply)
+		\item New players and products
+		\item Trading in Long- and Short-positions on a liquid whole sale market
+		\item Investments based on market expectations
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Spot Markets}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Markets}
+	Power can be traded at
+	\begin{itemize}
+		\item \href{http://www.nordpoolspot.com/}{Nordpool}
+		\item \href{http://www.eex.com/en}{European Energy Exchange}\\
+		\item \href{http://www.exaa.at}{Energy Exchange Austraia}
+	\end{itemize}
+\bigskip
+	All exchanges have established spot and futures markets.
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{EEX Spot Market}
+	Trading in
+	\begin{itemize}
+		\item Power
+		\item Natural gas
+		\item CO$_2$ emission rights
+	\end{itemize}
+	\begin{itemize}
+	\item Power day-ahead auctions (DE, AU, FR, CH)
+	\begin{itemize}
+		\item 24 hours of respective next day traded in one-hour intervals or block orders:
+		\item Baseload 1-24h; Peakload 9-20h; Night 1-6h; Rush hour 17-20h; Business 9-16h
+	\end{itemize}
+	\item Continuous power intraday trading (DE, FR), until 75 minutes before delivery (delivery on same or following day in single hours or blocks)
+\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item Participants submit their price offers|bit curves
+		\item EEX system prices are equilibrium prices that clear the market
+		\item EEX day prices are the average of 24-single hours
+		\item Similar structures can be found on other power exchanges (Nord Pool, APX, etc.)
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Electricity Markets in Europe}
+	\begin{figure}
+		\includegraphics[scale=0.4]{Figures/overview}
+	%	\caption{EXAA daily spot prices 2003-2016 \quantnet{\href{https://github.com/awdesch/Topics_in_Finance/tree/master/TiFEXAAts}{EXAA}}}
+	\end{figure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Economics of Spot Prices}
+\frame{
+	\frametitle{EXAA Spot Market Price Processes}
+	\begin{figure}
+		\includegraphics[scale=0.14]{Figures/EXAAspot}
+		\caption{EXAA daily spot prices 2003-2016 \quantnet{\href{https://github.com/awdesch/Topics_in_Finance/tree/master/TiFEXAAts}{EXAA}}}
+	\end{figure}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Why is electricity special?}
+	\begin{itemize}
+		\item Non-storable
+		\item Homogeneous
+		\item Produced through various methods
+		\item Production should be when there is demand
+		\item High fluctuation in demand
+		\item No short-term elasticity in demand
+		\item Negative prices are possible
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{Basic economic concepts}
+	\begin{itemize}
+		\item A producer produces only if marginal costs are met
+		\item There is only one price of a homogeneous product
+		\item Only producers with marginal costs below the market price will produce
+		\item Production which only meets marginal costs (MC) does not cover the fixed costs
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{Economics of Electricity Production}
+	\begin{itemize}
+		\item MC for power plants $\approx$ prices of fuel and CO$_2$ certificates
+		\item Order of power plant use
+		\begin{itemize}
+			\item wind
+			\item solar
+			\item water
+			\item nuclear
+			\item coal
+			\item gas
+			\item oil
+		\end{itemize}
+		\item To meet demand power plants are added in order of increasing MC (merit order)
+		\item The marginal power plant fixes the market price \\
+		{\bf for all plants in use}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Merit order (no trade)}
+	\begin{figure}
+		\includegraphics[scale=0.35]{Figures/MeritOrder}
+		\caption{Merit order. Source: \href{http://www.mentor-ebs.si/ARTICLES_files/powerprices1_OS8J.png}{Mentor EBS}}
+	\end{figure}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Futures Market}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{EEX Futures Market}
+	Traded products
+	\begin{itemize}
+		\item Futures contracts for power, natural gas, emissions, coal, wind power
+		\item Phelix Futures and Phelix Baseload or Peakload montly power index for the current month, the next nine months, eleven quarters and six years with cash settlement
+		\item Baseload and Peakload FR/DE Power Futures for the current month, next six months, seven quarters and six years with physical settlement, obliging for continuous delivery of 1MW during a month, quarter, a year
+		\item Actively exchange traded: 7 months, 5 quarters, 2-3 years
+		\item OTC transactions
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{EEX Options on Futures}
+	Traded products
+	\begin{itemize}
+		\item European-style Phelix Options which lead to opening of the corresponding Phelix Futures position if exercised 
+		\item Phelix Futures and Phelix Baseload or Peakload montly power index for the current month, the next nine months, eleven quarters and six years with cash settlement
+		\item Baseload and Peakload FR/DE Power Futures for the current month, next six months, seven quarters and six years with physical settlement, obliging for continuous delivery of 1MW during a month, quarter, a year
+		\item Actively exchange traded: 7 months, 5 quarters, 2-3 years
+		\item OTC transactions
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Classical Theory}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Spot-Forward Relationship: classical theory}
+	Under the no-arbitrage assumption we have the spot-forward relationship
+	\begin{equation*}
+	F(t,T) = S(t)\exp\{ (r-y)(T-t)\}
+	\end{equation*}
+	where $r$ is the interest rate at time $t$ for maturity $T$ and $y$ is the convenience yield (on holding inventories).
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item  In the stochastic model this means
+			\begin{equation*}
+		F(t,T) = \E_Q\{S(t) | \mathcal{F}_t\}
+		\end{equation*}
+		where $\mathcal{F}_t$ is the accumulated available market information (in most models the information generated by the spot price)
+	\item $Q$ is the risk-neutral probability
+	\begin{itemize}
+		\item discounted spot price is a $Q$-martingale
+		\item or the expected return under $Q$ is $r$
+	\end{itemize}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	We observe backwardation: Futures prices are below spot price
+	\begin{itemize}
+		\item  Producers accept paying a premium for securing future production
+		\item This may be caused by hedging pressure for long term investments
+		\item Convenience yield larger than risk-free rate
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	Most models give either normal backwardation or contango
+	\begin{itemize}
+		\item  No stochastic change of sign (risk premium)
+		\item True even for jump models
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Example: Energy fuels}
+	\begin{figure}
+		\includegraphics[scale=1.0]{Figures/energy}
+		\caption{Most energy fuels show contango. Source: \href{https://www.bloomberg.com/}{Bloomberg L.P.}}
+	\end{figure}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{
+%	\frametitle{Example: Metals}
+%	\begin{figure}
+%		\includegraphics[scale=1.0]{Figures/metals}
+%		\caption{Only aluminium shows untypical contango behaviour. Source: \href{https://www.bloomberg.com/}{Bloomberg L.P.}}
+%	\end{figure}
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{
+%	\frametitle{Example: Crop}
+%	\begin{figure}
+%		\includegraphics[scale=0.93]{Figures/crop}
+%		\caption{Contango and backwardation for crop. Source: \href{https://www.bloomberg.com/}{Bloomberg L.P.}}
+%	\end{figure}
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{
+%	\frametitle{Example: Precious Metals}
+%	\begin{figure}
+%		\includegraphics[scale=1.0]{Figures/save_haven}
+%		\caption{Contango for precious metals. Source: \href{https://www.bloomberg.com/}{Bloomberg L.P.}}
+%	\end{figure}
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{
+%	\frametitle{}
+%	The shape of commodities forward curves for different delivery periods indicates the market players' (producers, retailers and speculators) `attitudes' towards risk bearing in these markets\\
+%	\bigskip
+%	Contrast to equity: Here, if interest rates and dividends are assumed deterministic, simple no-arbitrage arguments are employed to show that the arbitrage-free forward price will be the cost of borrowing net of collected dividends yielded by the equity.
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+\begin{itemize}
+\item Storage of spot is not possible (only indirectly in water reservoirs or expensive large scale accumulators)
+\item Delivery periods for Futures
+\item Buy-and-Hold strategy fails
+\item No foundation for classical spot forward relations
+\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{}
+	In electricity markets one typically observes that,
+	\begin{itemize}
+		\item for `long' dated forward contracts, markets are in backwardation (forward below spot)
+		\item for `shorter' maturities the markets are in contango (forward above spot)
+ 	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Market Risk Premium}
+The market risk premium or forward bias $\pi(t,T)$ relates forward and expected spot prices\\
+\smallskip
+It is defined as the difference, calculated at time $t$, between the forward $F(t, T)$ at time $t$ with delivery $T$ and expected spot price:
+\begin{equation*}
+\pi(t, T) = F(t, T) - \E^P\{S(T)| \mathcal{F}_t\}
+\end{equation*}
+Here $\E^P$ is the expectation operator, under the historical measure $P$, with information up until time $t$ and $S(T)$ is the spot price at time $T$
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Electricity futures pricing model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Market risk premium}
+	\begin{itemize}
+		\item Exposure to the market will differ both between producers and retailers as well as within their own group
+		\item For instance, a large producer will generally be exposed to market uncertainty for a longer period of time, perhaps determined by the remaining life of the assets, whilst retailers will tend to make decisions based on a shorter time scale
+		\item So the need for risk-diversification has a temporal dimension
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item These differences in the desire to hedge positions are employed to explain the market risk premium and its sign 
+		\item Retailers are less incentivised to contract commodity forwards the further out we look into the market
+		\item In contrast, on the producers' side the need to hedge in the long-term does not fade away as quickly
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item We associate situations where $\pi(t, T)>0$ with the fact that retailers' desire to cover their positions `outweighs' those of the producers resulting in a positive market risk premium
+		\item The mirror image is therefore one where the producers' desire to hedge their positions outweighs that of the retailers resulting in a negative market risk premium
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{The electricity futures pricing model}
+	Assume that the spot price follows a mean-reverting multi-factor additive process
+	\begin{equation}
+		S(t) = \Lambda(t) + Z(t) + Y(t)
+	\end{equation}
+	\begin{itemize}[]
+		\item[] $\Lambda(t)$ - deterministic seasonal spot price level
+		\item[] $Z(t)$ - low-frequency non-stationary dynamics
+		\item[] $Y(t)$ - short term variations
+	\end{itemize} 
+Benth et al. (2014)
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Stable CARMA$(p,q)$-L\'evy process}
+
+\begin{equation*}
+a(D){\bf Y_t} = b(D)D{\bf L}(t), \quad D \stackrel{\text{def}}{=} \frac{d}{dt},
+\end{equation*}
+where the auto-regressive polynomial is given by
+\begin{equation*}
+P(z) = z^p + a_1z^{p-1} + \ldots + a_p
+\end{equation*}
+and the moving-average polynomial by
+\begin{equation*}
+Q(z) = b_0+ b_1z^{q} +\ldots + b_{p-1}z^{p-1}.
+\end{equation*}
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+\begin{align}
+Y_t &= {\bf b}^\top {\bf X}_t \quad\quad\quad\quad\quad\quad\quad\;\;\, \text{state equation}\\
+\text{d}{\bf X}_t &= ({\bf A}{\bf X}_t)\text{d}t +  {\bf e}_p \text{d}{\bf L}_t \quad\quad \text{observation equation} \label{eq:no16}
+\end{align}
+where
+\[{\hspace{-.5cm}\bf A} = \left( \begin{array}{ccccc}
+0 & 1 & 0 & \ldots& 0\\
+0 & 0 & 1 & \ddots& \vdots\\
+\vdots &  & \ddots & \ddots &0\\
+0 & \ldots & \ldots & 0 & 1\\
+-\alpha_p & -\alpha_{p-1} & \ldots & & -\alpha_1 \end{array} \right)\;\; {\bf e}_p =  \left( \begin{array}{c} 
+0\\
+0\\
+\vdots\\
+0\\
+1
+\end{array} \right) \;\; {\bf b} =   \left( \begin{array}{c} 
+b_0\\
+b_1\\
+\vdots\\
+b_{p-2}\\
+b_{p-1}
+\end{array} \right) \quad  {\bf X}_t =   \left( \begin{array}{c} 
+X_t\\
+X_t^{(1)}\\
+\vdots\\
+X_t^{(p-2)}\\
+X_t^{(p-1)}
+\end{array} \right) \]
+With Brownian motion $B_t$ instead of the L\'evy process $L_t$ we have Gaussian CARMA$(p,q)$	
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{Characteristic function of $L(t)$}
+	\vspace{-0.2cm}Suppose the L\'evy processes are exponentially integrable with $\kappa >0$ such that
+	\begin{equation*}
+	\int_{|z|\geq 1} \exp(\tilde{\kappa}z)l_j(\text{d}z) < \infty,
+	\end{equation*}
+	for all $\tilde{\kappa}\leq \kappa$ and $j = 1, \ldots, n$. \\
+	This implies that the spot price process $S(t)$ has exponential moments up to order $\kappa$.
+	The characteristic function of $L(t)$ with log exponential moments\\
+	\[\log \E[ \exp\{izL_j(t)\}] = t\phi_L(z)\]
+	is defined as
+	\begin{equation*}
+	\phi_L(z) = \begin{cases}
+		-\gamma^\alpha |z|^\alpha \left\{1 - i\beta (\sign z) \tan\left(\frac{\pi \alpha}{2}\right) \right\} + i \mu z& \text{for}\; \alpha \neq 1 \\
+		-\gamma|z|\left\{1 + i\beta \frac{2}{\pi}(\sign z)\log|z| \right\} +i\mu z & \text{for}\; \alpha = 1 \\
+	\end{cases}
+	\end{equation*}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\frame{
+%	\frametitle{Solution to SDE: Ornstein-Uhlenbeck}
+%	\begin{equation*}
+%		Y_t = {\bf b}^\top \exp\{A(t-s)\}{\bf X}_s + \int_s^{t}{\bf b}^\top\exp\{A(t-u)\}{\bf e}_p \text{d}L_u, \quad u \leq s < t
+%    \end{equation*}
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{Futures price dynamics}
+	The futures price $f(t,\tau)$ is defined as
+	\begin{equation*}
+		f(t, \tau) = \E_Q[S(\tau)|\mathcal{F}_t], \quad 0 \leq t \leq \tau < \infty,
+	\end{equation*}
+	where $Q$ is the risk-neutral probability measure, with $S(\tau)\in L^1(Q)$. 
+}
+
+
+
+
+
+
+\section{The Bessembinder-Lemon Model}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{The Bessembinder-Lemon Model}
+	\begin{itemize}
+		\item One-period model
+		\item Power companies are able to forecast demand in the immediate future with precision
+		\item $N_P$ identical producers; $N_R$ identical retailers that buy power in the wholesale market and sell it to final consumers at fixed unit price
+		\item $P_R$ fixed unit price that consumers pay
+		\item $Q_{R_i}$ an exogenous random variable that denotes the realised demand for retailer $i$
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{The cost function}
+	\begin{itemize}
+		\item Each producer $i$ has cost function
+		\begin{equation*}
+		TC_i = F + \frac{a}{c}(Q_{P_i})^c,
+		\end{equation*}
+		where $F$ are fixed costs, $Q_{P_i}$ is the output of producer $i$, and $c\leq 2$
+		\item The cost function implied that the marginal production costs increase with output
+		\item If $c>2$ marginal costs increase at an increasing rate with output
+		\item Moreover, the distribution of power prices will be positively skewed even when the distribution of power demand is symmetric
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Clearing prices}
+	\begin{itemize}
+		\item First, assume that forward prices are given
+		\item Obtain optimal behaviour in the spot market
+		\item Work back and find optimal positions in the forward market
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{The wholesale spot market}
+	\begin{itemize}
+		\item Producers sell to retailers who in turn distribute to power consumers
+		\item $P_W$ denotes the wholesale spot price, $Q_{P_i}^W$ quantity sold by producer $i$ in the wholesale spot market, $Q_{P_i}^F$ quantity that producer $i$ has agreed to deliver (purchase if negative) in the forward market at the fixed forward price $P_F$.
+		\item The ex-post profit of producer $i$ is given by
+		\begin{equation*}
+		\pi_{P_i} = P_W Q_{P_i}^W + P_F Q_{P_i}^F - F - \frac{a}{c}(Q_{P_i})^c
+		\end{equation*}
+		where each producer's physical production, $Q_{P_i}$ is the sum of its spot and forward sales $Q_{P_I}^W + Q_{P_I}^F$
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item Retailers buy in the real-time wholesale market the difference between realised retail demand and their forward positions
+		\item $Q_{P_i}^F$ quantity sold (purchased if negative) forward by reatiler $j$, $P_R$ fixed retail price per unit
+		\item The ex-post profit for each retailer is
+		\begin{equation*}
+		\pi_{P_j} = P_R Q_{R_j} + P_F Q_{R_j}^F - P_W(Q_{R_j} + Q_{R_j}^F),
+		\end{equation*}
+		\item The profit maximising quantity for producer $i$ is (FOC wrt $Q_{P_i}^W$)
+		\begin{equation*}
+		Q_{P_i}^W = \left(\frac{P_W}{a}\right)^\frac{1}{c-1} - Q_{P_i}^F
+		\end{equation*}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item The equilibrium total retail demand is equal to total production and forward contracts are in zero net supply
+		\item Hence we must have that summing over all producers production must equal total demand from retailers
+		\begin{equation*}
+		N_P\left(\frac{P_W}{a}\right)^\frac{1}{c-1} = \sum_{j=1}^{N_R} Q_{R_j}
+		\end{equation*}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item Therefore the market-clearing wholesale price is
+		\begin{equation*}
+		P_W = a\left(\frac{Q^D}{N_P}\right)^{c-1},
+		\end{equation*}
+		where $Q^D = \sum_{j=1}^{N_R} Q_{R_j}$ is total system demand. We see that when $c>2$ an increase in demand has a disproportionate effect on power prices
+		\item Each producers sale in the wholesale market is
+		\begin{equation*}
+		Q_{P_i}^W = \frac{Q^D}{N_P} - Q_{P_i}^F
+		\end{equation*}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Demand for forward positions}
+	\begin{itemize}
+		\item Producers profit (with no forwards) is 
+		\begin{equation*}
+		\rho_{P_i} =P_W\frac{Q^D}{N_P} - F - \frac{a}{c}\left(\frac{Q^D}{N_p}\right)^c
+		\end{equation*}
+		\item Retailers profit (with no forwards) is
+		\begin{equation*}
+		\rho_{R_j} = P_RQ_{R_j} - P_WQ_{R_j}
+		\end{equation*}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Mean-Variance Analysis for optimal forward position}
+	\begin{itemize}
+		\item Assume that market players
+		\begin{equation*}
+		\max_{Q_{\{P_i,R_j\}}^F} \E[\pi_{\{P_i,R_j\}}] - \frac{A}{2} \Var[\pi_{\{P_i,R_j\}}]
+		\end{equation*}
+		where, for example, producers have the profit function
+		\begin{equation*}
+		\pi_{P_i} = \rho_{P_i} + P^FQ^F - P_WQ^F
+		\end{equation*}
+		FOCs imply
+		\begin{equation*}
+		Q_{P_i,R_j}^F = \frac{P^F - \E(P_W)}{A\Var(P_W)} + \frac{\Cov[\rho_{\{P_i,R_j\}},P_W]}{\Var(P_W)}
+		\end{equation*}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item The optimal forward position contains two components
+		\begin{itemize}
+			\item The first term reflects the position taken in response to the bias $P^F-\E(P_W)$
+			\item The second term is the quantity sold or bought forward to minimize the variance of profits
+		\end{itemize}
+		\item Forward hedging can reduce risk precisely because the covariance term is generally non-zero
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Equilibrium forward price}
+	\begin{itemize}
+		\item Using the market clearing condition one can show that
+		\begin{equation*}\hspace{-0.5cm}
+		P_F = \E(P_W) - \frac{N_P}{Nca^{\frac{1}{c-1}}}\left\{cP_R\Cov(P_W^{\frac{1}{c-1}},P_W) - \Cov(P_W^{\frac{c}{c-1}},P_W) \right\},
+		\end{equation*}
+		where $N = \frac{N_R +N_P}{A}$ reflects the number of firms in the industry and the degree to which they are concerned with risk
+		\item The forward price will be less than the expected wholesale price, if the first term in brackets, which reflects retail risk, is larger than the second term, which reflects production cost risk
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Forward bias}
+	We can approximate $P^{\frac{1}{c-1}}$ and $P^{\frac{c}{c-1}}$ using a Taylor series to see
+	\begin{equation*}
+	P_F = \E(P_W) - \alpha \Var(P_W) + \gamma S(P_W)
+	\end{equation*}
+	where
+	\begin{equation*}
+	\alpha = \frac{N_P(\frac{c}{c-1})}{Nca^{\frac{1}{c-1}}} \left[\left\{\E(P_W)\right\}^{\frac{1}{c-1}} - P_R\left\{\E(P_W)\right\}^{\frac{c+1}{c-1}}\right]
+	\end{equation*}
+	and
+	\begin{equation*}
+	\gamma = \frac{N_P(\frac{c}{c-1})}{2Nca^{\frac{1}{c-1}}} \left[\frac{1}{c-1}\left\{\E(P_W)\right\}^{\frac{c+1}{c-1}} - \frac{c+1}{c-1}P_R\left\{\E(P_W)\right\}^{\frac{2}{c-1}}\right]
+	\end{equation*}
+	We see that $\alpha <0$, since $\E(P_W) <P_R$
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{Forward bias}
+	\begin{itemize}
+		\item It must be the case that $\E(P_W) < P_R$
+		\item If the distribution of spot prices is not skewed, $P_F<\E(P_W)$
+		\begin{itemize}
+			\item The downward bias in the forward price in the zero-skewness case reflects retailer's net hedging demand, who want to sell in the forward market
+			\item The profits of power retailers are positively exposed, on average, because more retail power is sold when $P_W$ is high
+			\item To reduce risk, retailers want to sell forwards
+		\end{itemize}
+		\item Typically we have skewness $(c>2)$,
+		\begin{itemize}
+			\item So $\gamma >0$ and the forward price increases with increasing skewness
+			\item This reflects the fact that the industry wants to hedge against price spikes
+		\end{itemize}
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Further Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+\frametitle{Further Information}
+
+BLABLABLA
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+\frametitle{For Further Reading}
+\begin{thebibliography}{aaaaaaaaaaaaaaaaa}
+\beamertemplatearticlebibitems
+\bibitem{Oetiker:2006}
+Tobias Oetiker, Hubert Partl, Irene Hyna and Elisabeth Schlegl
+\newblock{\em The Not So Short Introduction to \LaTeX 2e}
+\newblock available on \href{http://www.ctan.org/tex-archive/info/lshort/english/}{www.ctan.org}, 2008
+\beamertemplatearticlebibitems
+\bibitem{Pakin:2008}
+Scott Pakin
+\newblock{\em The Comprehensive \LaTeX Symbol List}
+\newblock available on \href{http://www.ctan.org/tex-archive/info/symbols/comprehensive/}{www.ctan.org}, 2008
+\beamertemplatebookbibitems
+\bibitem{Eckel:2004}
+Frank Mittelbach and Michel Goossens
+\newblock {\em The \LaTeX{ }Companion -- 2nd ed.}
+\newblock Addison-Wesley, 2004
+\end{thebibliography}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+\frametitle{For Further Reading}
+\begin{thebibliography}{aaaaaaaaaaaaaaaaa}
+\beamertemplatearticlebibitems
+\bibitem{Trettin:2007}
+Mark Trettin and Jürgen Fenn
+\newblock{\em An essential guide to \LaTeX 2e usage}
+\newblock available on \href{http://tug.ctan.org/cgi-bin/ctanPackageInformation.py?id=l2tabu-english}{www.ctan.org}, 2007
+\beamertemplatearticlebibitems
+\bibitem{wiki:index}
+Wikipedia Wiki Books
+\newblock{\em LaTeX-Wörterbuch: InDeX}
+\newblock available on \href{http://de.wikibooks.org/}{www.wikipedia.de}
+\beamertemplatearticlebibitems
+\bibitem{Tantau:2007}
+Till Tantau
+\newblock{\em User Guide to the Beamer Class, Version 3.07}
+\newblock available on \href{http://latex-beamer.sourceforge.net}{www.sourceforge.net}, 2007
+\end{thebibliography}
+}
+
+% Define the end of the document:
+\end{document}

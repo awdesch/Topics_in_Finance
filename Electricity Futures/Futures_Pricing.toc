@@ -1,0 +1,10 @@
+\beamer@endinputifotherversion {3.36pt}
+\select@language {english}
+\beamer@sectionintoc {1}{History}{3}{0}{1}
+\beamer@sectionintoc {2}{Spot Markets}{3}{0}{2}
+\beamer@sectionintoc {3}{Economics of Spot Prices}{5}{0}{3}
+\beamer@sectionintoc {4}{Futures Market}{6}{0}{4}
+\beamer@sectionintoc {5}{Classical Theory}{3}{0}{5}
+\beamer@sectionintoc {6}{Electricity futures pricing model}{9}{0}{6}
+\beamer@sectionintoc {7}{The Bessembinder-Lemon Model}{9}{0}{7}
+\beamer@sectionintoc {8}{Further Information}{14}{0}{8}
