@@ -1,11 +1,50 @@
 % Type of the document
+%\documentclass{beamer}
+%
+%% elementary packages:
+%\usepackage{graphicx}
+%\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+%\usepackage[english]{babel}
+%\usepackage{listings}
+%\usepackage{xcolor}
+%\usepackage{eso-pic}
+%\usepackage{mathrsfs}
+%\usepackage{url}
+%\usepackage{amssymb}
+%\usepackage{amsmath}
+%\usepackage{multirow}
+%\usepackage{hyperref}
+%\usepackage{booktabs}
+%
+%% additional packages
+%\usepackage{bbm}
+%
+%% packages supplied with ise-beamer:
+%\usepackage{cooltooltips}
+%\usepackage{colordef}
+%\usepackage{beamerdefs}
+%\usepackage{lvblisting}
+%
+%\def\defeq{\stackrel{\mathrm{def}}{=}}
+%\def\trans{\top}
+%\def\E{\mbox{E}}
+%\def\P{\mbox{P}}
+%\def\Var{\mbox{Var}}
+%\def\sign{\mathop{\textsf{sign}}}
+%\def\abs{\mathop{\textsf{abs}}}
+%\def\cov{\mbox{Cov}}
+%\def\Cov{\mbox{Cov}}
+%\def\Corr{\mbox{Corr}}
 \documentclass{beamer}
-
+\usepackage[ngerman, english]{babel}
+%\usepackage[utf8]{inputenc} %für Umlaute
 % elementary packages:
+\usepackage{animate}
 \usepackage{graphicx}
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[english]{babel}
+%\usepackage[english]{babel}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{eso-pic}
@@ -14,9 +53,9 @@
 \usepackage{amssymb}
 \usepackage{amsmath}
 \usepackage{multirow}
-\usepackage{hyperref}
-\usepackage{booktabs}
 
+\usepackage{booktabs}
+\usepackage[]{algorithm2e}
 % additional packages
 \usepackage{bbm}
 
@@ -25,18 +64,34 @@
 \usepackage{colordef}
 \usepackage{beamerdefs}
 \usepackage{lvblisting}
+\usepackage{hyperref}
 
-\def\defeq{\stackrel{\mathrm{def}}{=}}
-\def\trans{\top}
-\def\E{\mbox{E}}
-\def\P{\mbox{P}}
-\def\Var{\mbox{Var}}
-\def\sign{\mathop{\textsf{sign}}}
+\def\Corr{\operatorname{\textsf{Corr}}}
+% Expectation
+\def\E{\operatorname{\textsf{E}}}
+% Varianz
+\def\Var{\operatorname{\textsf{Var}}}
+\def\var{\operatorname{\textsf{Var}}}
+% Covarianz
+\def\Cov{\operatorname{\textsf{Cov}}}
+\def\cov{\operatorname{\textsf{Cov}}}
+% P for Probability
+\def\Prob{{\text{P}}}
+% Indicator function:
+% \newcommand{\IF}{\boldsymbol{1}}
+\def\IF{\boldsymbol{I}}
+% d in integrals
+\def\dx{\,\mbox{d}}
+% Indicator function:
+%\def\IF{\boldsymbol{1}}
+% N of the Normal Distribution
+\def\N{{\text{N}}} 
+%\def\E{\mathop{\mathit{E}}}
+%\def\Var{\mathop{\rm{Var}}}
+%\def\Cov{\mathop{\rm{Cov}}}
 \def\abs{\mathop{\textsf{abs}}}
-\def\cov{\mbox{Cov}}
-\def\Cov{\mbox{Cov}}
-\def\Corr{\mbox{Corr}}
-
+\def\sign{\mathop{\textsf{sign}}}
+\def\ord#1{(#1)}
 
 
 % Change the pictures here:
@@ -97,9 +152,9 @@ Humboldt-Universität zu Berlin \\}
 		\item Electricity Derivative Pricing
 		\begin{itemize}
 			\item Classical Theory
-			\item Spread Options
-			\item Caps and Floors
-			\item Swing Options
+			\item Electricity futures pricing model
+			\item Empirical Results
+			\item Conclusions
 		\end{itemize}
 	\end{enumerate}
 }
@@ -377,7 +432,7 @@ Before liberalisation: system based on calculatory costs, prices according to `c
  	\end{itemize}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
+\frame[label=MPR]{
 	\frametitle{Market Risk Premium}
 The market risk premium or forward bias $\pi(t,T)$ relates forward and expected spot prices\\
 \smallskip
@@ -385,19 +440,22 @@ It is defined as the difference, calculated at time $t$, between the forward $F(
 \begin{equation*}
 \pi(t, T) = F(t, T) - \E^P\{S(T)| \mathcal{F}_t\}
 \end{equation*}
-Here $\E^P$ is the expectation operator, under the historical measure $P$, with information up until time $t$ and $S(T)$ is the spot price at time $T$
+Here $\E^P$ is the expectation operator, under the historical measure $P$, with information up until time $t$ and $S(T)$ is the spot price at time $T$\\
+ \quad \hyperlink{BLmodel}{\beamergotobutton{Bessembinder-Lemon Model}}\\
+  \quad \hyperlink{FEB4}{\beamergotobutton{FEB4}}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \section{Electricity futures pricing model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
+\frame[label=MPR]{
 	\frametitle{Market risk premium}
 	\begin{itemize}
 		\item Exposure to the market will differ both between producers and retailers as well as within their own group
 		\item For instance, a large producer will generally be exposed to market uncertainty for a longer period of time, perhaps determined by the remaining life of the assets, whilst retailers will tend to make decisions based on a shorter time scale
 		\item So the need for risk-diversification has a temporal dimension
-	\end{itemize}
+	\end{itemize} 
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frame{
@@ -417,90 +475,80 @@ Here $\E^P$ is the expectation operator, under the historical measure $P$, with 
 	\end{itemize}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
+\frame[label=arithModel]{
 	\frametitle{The electricity futures pricing model}
 	Assume that the spot price follows a mean-reverting multi-factor additive process
 	\begin{equation}
-		S(t) = \Lambda(t) + Z(t) + Y(t)
+		S(t) = \text{seasonality} + \text{trend} + \text{stochastic part}
 	\end{equation}
-	\begin{itemize}[]
-		\item[] $\Lambda(t)$ - deterministic seasonal spot price level
-		\item[] $Z(t)$ - low-frequency non-stationary dynamics
-		\item[] $Y(t)$ - short term variations
+	\begin{itemize}
+		\item deterministic seasonal spot price level - $\Lambda(t)$ 
+		\item low-frequency non-stationary dynamics - $Z(t)$
+		\item L\'evy-driven short term variations with dependency structure - $Y(t)$
 	\end{itemize} 
-Benth et al. (2014)
+Benth et al. (2014) \quad \hyperlink{Model}{\beamergotobutton{Details}} \quad \hyperlink{Model}{\beamergotobutton{FEB4}}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-	\frametitle{Stable CARMA$(p,q)$-L\'evy process}
 
-\begin{equation*}
-a(D){\bf Y_t} = b(D)D{\bf L}(t), \quad D \stackrel{\text{def}}{=} \frac{d}{dt},
-\end{equation*}
-where the auto-regressive polynomial is given by
-\begin{equation*}
-P(z) = z^p + a_1z^{p-1} + \ldots + a_p
-\end{equation*}
-and the moving-average polynomial by
-\begin{equation*}
-Q(z) = b_0+ b_1z^{q} +\ldots + b_{p-1}z^{p-1}.
-\end{equation*}
-
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frame{
 	\frametitle{}
-\begin{align}
-Y_t &= {\bf b}^\top {\bf X}_t \quad\quad\quad\quad\quad\quad\quad\;\;\, \text{state equation}\\
-\text{d}{\bf X}_t &= ({\bf A}{\bf X}_t)\text{d}t +  {\bf e}_p \text{d}{\bf L}_t \quad\quad \text{observation equation} \label{eq:no16}
-\end{align}
-where
-\[{\hspace{-.5cm}\bf A} = \left( \begin{array}{ccccc}
-0 & 1 & 0 & \ldots& 0\\
-0 & 0 & 1 & \ddots& \vdots\\
-\vdots &  & \ddots & \ddots &0\\
-0 & \ldots & \ldots & 0 & 1\\
--\alpha_p & -\alpha_{p-1} & \ldots & & -\alpha_1 \end{array} \right)\;\; {\bf e}_p =  \left( \begin{array}{c} 
-0\\
-0\\
-\vdots\\
-0\\
-1
-\end{array} \right) \;\; {\bf b} =   \left( \begin{array}{c} 
-b_0\\
-b_1\\
-\vdots\\
-b_{p-2}\\
-b_{p-1}
-\end{array} \right) \quad  {\bf X}_t =   \left( \begin{array}{c} 
-X_t\\
-X_t^{(1)}\\
-\vdots\\
-X_t^{(p-2)}\\
-X_t^{(p-1)}
-\end{array} \right) \]
-With Brownian motion $B_t$ instead of the L\'evy process $L_t$ we have Gaussian CARMA$(p,q)$	
+	\begin{center}
+		\begin{figure}
+			\includegraphics[scale=0.3]{Figures/Spot} %\includegraphics[scale=0.22]{Figures/seasonal_var}
+			\caption{Daily spot prices July 1, 2002 to June 30, 2006 base load (top), peak load (bottom).\\
+			}
+		\end{figure}
+	\end{center}
 }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frame{
-	\frametitle{Characteristic function of $L(t)$}
-	\vspace{-0.2cm}Suppose the L\'evy processes are exponentially integrable with $\kappa >0$ such that
-	\begin{equation*}
-	\int_{|z|\geq 1} \exp(\tilde{\kappa}z)l_j(\text{d}z) < \infty,
-	\end{equation*}
-	for all $\tilde{\kappa}\leq \kappa$ and $j = 1, \ldots, n$. \\
-	This implies that the spot price process $S(t)$ has exponential moments up to order $\kappa$.
-	The characteristic function of $L(t)$ with log exponential moments\\
-	\[\log \E[ \exp\{izL_j(t)\}] = t\phi_L(z)\]
-	is defined as
-	\begin{equation*}
-	\phi_L(z) = \begin{cases}
-		-\gamma^\alpha |z|^\alpha \left\{1 - i\beta (\sign z) \tan\left(\frac{\pi \alpha}{2}\right) \right\} + i \mu z& \text{for}\; \alpha \neq 1 \\
-		-\gamma|z|\left\{1 + i\beta \frac{2}{\pi}(\sign z)\log|z| \right\} +i\mu z & \text{for}\; \alpha = 1 \\
-	\end{cases}
-	\end{equation*}
+	\frametitle{}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[scale=0.3]{Figures/Future} %\includegraphics[scale=0.22]{Figures/seasonal_var}
+			\caption{Daily futures prices July 1, 2002 to June 30, 2006 base load (top), peak load (bottom).\\
+			}
+		\end{figure}
+	\end{center}
 }
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{
+%	\frametitle{The electricity futures pricing model}
+%	Assume that the spot price follows a mean-reverting multi-factor additive process
+%	\begin{equation}
+%	S(t) = \Lambda(t) + Z(t) + Y(t)
+%	\end{equation}
+%	\begin{itemize}[]
+%		\item[] $\Lambda(t)$ - deterministic seasonal spot price level
+%		\item[] $Z(t)$ - low-frequency non-stationary dynamics
+%		\item[] $Y(t)$ - short term variations
+%	\end{itemize} 
+%	Benth et al. (2014)
+%}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Algorithm}
+%\frame[label=FEB4]{
+%	\frametitle{FEB Four Algorithm}
+%	\begin{table}[h]
+%		\begin{center}
+%			\hspace{-1cm}	\begin{tabular}{cc} 
+%				{\color{iseblue} Econometrics} & {\color{iseblue} Fin. Mathematics}\\
+%				utilisation\quad \hyperlink{MODEL}{\beamergotobutton{Model}} & $CARMA(p, q)$\quad\hyperlink{CARMA}{\beamergotobutton{CARMA}}\\
+%				$\downarrow$ & $\downarrow$ \\
+%				deseasonalise\quad \hyperlink{SEAS}{\beamergotobutton{$\Lambda_t$}} & Futures pricing\quad \hyperlink{PRICING}{\beamergotobutton{$F_t$}}\\
+%				$\downarrow$ & $\downarrow$ \\
+%				ARMA($p,q$) & Market price of risk\quad\hyperlink{MPR}{\beamergotobutton{$\theta$}}\\\\
+%				$\downarrow$&\\
+%				seasonal variance\quad \hyperlink{SEAS}{\beamergotobutton{$\sigma_t$}}&\\
+%				normalising increments\quad \hyperlink{GAUSS}{\beamergotobutton{$e_t = \frac{\widehat{\varepsilon}_t}{\widehat{\sigma}_t}\sim \operatorname{N}(0,1)$}}&\\
+%			\end{tabular}
+%		\end{center}
+%	\end{table}
+%}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %\frame{
@@ -512,23 +560,223 @@ With Brownian motion $B_t$ instead of the L\'evy process $L_t$ we have Gaussian 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\frame{
+\frame[label=Ft]{
 	\frametitle{Futures price dynamics}
-	The futures price $f(t,\tau)$ is defined as
+	The futures price $F(t,T_1, T_2)$ is defined as
 	\begin{equation*}
-		f(t, \tau) = \E_Q[S(\tau)|\mathcal{F}_t], \quad 0 \leq t \leq \tau < \infty,
+		F(t, T_1, T_2) = \E_Q\left[\frac{1}{T_2-T_1} \int_{T_1}^{T_2} S(\tau)\text{d}\tau \big| \mathcal{F}_t\right],
 	\end{equation*}
-	where $Q$ is the risk-neutral probability measure, with $S(\tau)\in L^1(Q)$. 
+	where $Q$ is the risk-neutral probability measure, with $S(\tau)\in L^1(Q)$. \\
+	\bigskip
+	The futures price is the {\em expected value of the average spot price} within the delivery period.\\
+	\quad\hyperlink{FEB4}{\beamergotobutton{Return}}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame[label=FEB4]{
+	\frametitle{The methodology}
+	\begin{table}[h]
+		\begin{center}
+			\hspace{-1cm}	\begin{tabular}{cc} 
+				{\color{iseblue} Econometrics} & {\color{iseblue} Fin. Mathematics}\\
+				Spot price\quad \hyperlink{arithModel}{\beamergotobutton{Model}} & $CARMA(p, q)$\quad\hyperlink{Model}{\beamergotobutton{CARMA}}\\
+				$\downarrow$ & $\downarrow$ \\
+				deseasonalise \quad \hyperlink{SEAS}{\beamergotobutton{$\Lambda_t$}} & Futures pricing\quad \hyperlink{Ft}{\beamergotobutton{$F_t$}}\\
+				$\downarrow$ & $\downarrow$ \\
+				detrend  & Market price of risk\quad\hyperlink{MPR}{\beamergotobutton{$\theta$}}\\
+					$\downarrow$ &  \\
+				TSA: ARMA($p,q$)  & \\
+			\end{tabular}
+		\end{center}
+	\end{table}
+Benth et al. (2007)
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Data}
+%%%%%%%%%%%%%%    2-1    %%%%%%%%%%%%%%%
+\frame[label=DATA]{
+	\frametitle{EEX price data}
+	Spot prices:
+	\begin{itemize}
+		\item July 1, 2002 to June 30, 2006
+		\item peak load prices: 5 days a week ($T_p = 1045$)
+		\item base load prices: 7 days a week ($T_p = 1461$)
+	\end{itemize}
+	Futures:
+	\begin{itemize}
+		\item July 1, 2002 to June 30, 2006
+		\item peak load futures: average for peak hours between 8am \& 8pm 
+		\item base load futures: average for all hours per day
+		\item Delivery period: 1 Month contracts
+	\end{itemize}
+}
 
+\section{Empirical Results}
+\frame[label=Results01]{
+	\frametitle{Stable CARMA(2,1) model}
+	\begin{table}[H]
+		\begin{center}
+			\begin{tabular}{l|rrr||rrrr}\hline\hline
+				&\multicolumn{3}{c}{CARMA parameters}&\multicolumn{4}{c}{Stable parameters} \\
+				\hline
+				&  $b_1$ & $a_1$ & $a_2$ & $\alpha_L$ & $\beta_L$ & $\gamma_L$ & $\E[L(1)]$\\
+				\hline
+				Base load & 0.286  & 1.485 & 0.091 & 1.652 & 0.391 & 6.407 & 0.057\\
+				Peak load & 0.613  & 2.334 & 0.226 & 1.321 &  0.065& 6.520 & $-0.045$\\
+				\hline\hline
+			\end{tabular}
+			\caption{CARMA(2,1) Coefficient estimates of the stable CARMA process} %\label{tab:CARMAcoef}
+		\end{center}
+	\end{table}
+}
 
+\frame{
+	\frametitle{Market Price of Risk}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[scale=0.4]{Figures/MPR} %\includegraphics[scale=0.22]{Figures/seasonal_var}
+			\caption{MPR: estimate (bold), empirical (thin) for base (left) and peak load (right). Time to maturity: $u=\frac{1}{2}(T_1 + T_2)-t$\\
+			}
+		\end{figure}
+	\end{center}
+}
+\section{Conclusions}
+\frame{
+	\frametitle{Conclusions}
+	\begin{itemize}
+		\item Two factor model feat. spikes and non-stationarity
+		\item MPR shows typical change of sign depending on time to maturity
+		\item At short end: positive MPR due to skewness in spot prices (Bessembinder \& Lemon (2002))
+		\item At long end (>2 months) negative MPR: Generators want to hedge uncertainty about future prices
+	\end{itemize}
+Open questions:
+	\begin{itemize}
+		\item Goodness of fit of the stable CARMA model?
+		\item Negative price spikes are not covered
+		\item Effects drawn by renewables not considered
+		\item Does new data give similar results?
+	\end{itemize}
+}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame[label=SEAS]{
+	\frametitle{Seasonality function $\Lambda$:\\ Truncated Fourier Series}
+	
+	
+	\begin{align*}
+	\Lambda_{p,t} &= c_1 + c_2 \cdot t + c_{3} \cos\bigg(\frac{2\pi t}{261} \bigg)+ c_{4}  \sin\bigg(\frac{2\pi t}{261} \bigg)\\\bigskip
+	\Lambda_{b,t} &= c_1 + c_2 \cdot t + c_{3} \cos\bigg(\frac{2\pi t}{365} \bigg)+ c_{4}  \sin\bigg(\frac{2\pi t}{365} \bigg) \\
+	&+ c_{5} \cos\bigg(\frac{2\pi t}{7} \bigg)+ c_{6}  \sin\bigg(\frac{2\pi t}{7} \bigg)\\
+	\end{align*}
+	\bigskip
+	Estimation via robust MLE, indices  $p$ and $b$ stand for peak load spot prices and base load spot prices
+%	\hspace*{\fill}\hyperlink{FEB4}{\beamergotobutton{return}}\\
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{center}
+		\begin{figure}
+			\includegraphics[scale=0.3]{Figures/SEAS} %\includegraphics[scale=0.22]{Figures/seasonal_var}
+			\caption{Daily spot prices July 1, 2002 to June 30, 2006 base load (top), peak load (bottom) with corresponding seasonal component.
+			}
+		\end{figure}
+	\end{center}
+\quad\hyperlink{FEB4}{\beamergotobutton{return}}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame[label=Model]{
+	\frametitle{Stable CARMA$(p,q)$-L\'evy process}
+	
+	\begin{equation*}
+	a(D){\bf Y_t} = b(D)D{\bf L}(t), \quad D \stackrel{\text{def}}{=} \frac{d}{dt},
+	\end{equation*}
+	where the auto-regressive polynomial is given by
+	\begin{equation*}
+	P(z) = z^p + a_1z^{p-1} + \ldots + a_p
+	\end{equation*}
+	and the moving-average polynomial by
+	\begin{equation*}
+	Q(z) = b_0+ b_1z^{q} +\ldots + b_{p-1}z^{p-1}.
+	\end{equation*}
+	
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{align}
+	Y_t &= {\bf b}^\top {\bf X}_t \quad\quad\quad\quad\quad\quad\quad\;\;\, \text{state equation}\\
+	\text{d}{\bf X}_t &= ({\bf A}{\bf X}_t)\text{d}t +  {\bf e}_p \text{d}{\bf L}_t \quad\quad \text{observation equation} \label{eq:no16}
+	\end{align}
+	where
+	\[{\hspace{-.5cm}\bf A} = \left( \begin{array}{ccccc}
+	0 & 1 & 0 & \ldots& 0\\
+	0 & 0 & 1 & \ddots& \vdots\\
+	\vdots &  & \ddots & \ddots &0\\
+	0 & \ldots & \ldots & 0 & 1\\
+	-\alpha_p & -\alpha_{p-1} & \ldots & & -\alpha_1 \end{array} \right)\;\; {\bf e}_p =  \left( \begin{array}{c} 
+	0\\
+	0\\
+	\vdots\\
+	0\\
+	1
+	\end{array} \right) \;\; {\bf b} =   \left( \begin{array}{c} 
+	b_0\\
+	b_1\\
+	\vdots\\
+	b_{p-2}\\
+	b_{p-1}
+	\end{array} \right) \quad  {\bf X}_t =   \left( \begin{array}{c} 
+	X_t\\
+	X_t^{(1)}\\
+	\vdots\\
+	X_t^{(p-2)}\\
+	X_t^{(p-1)}
+	\end{array} \right) \]
+	With Brownian motion $B_t$ instead of the L\'evy process $L_t$ we have Gaussian CARMA$(p,q)$	
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\frame{
+	\frametitle{Characteristic function of $L(t)$}
+	\vspace{-0.3cm}Suppose the L\'evy processes are exponentially integrable with $\kappa >0$ such that\vspace{-0.1cm}
+	\begin{equation*}
+	\int_{|z|\geq 1} \exp(\tilde{\kappa}z)l_j(\text{d}z) < \infty,
+	\end{equation*}
+	for all $\tilde{\kappa}\leq \kappa$ and $j = 1, \ldots, n$. \\
+	This implies that the spot price process $S(t)$ has exponential moments up to order $\kappa$.
+	The characteristic function of $L(t)$ with log exponential moments\\\vspace{-0.3cm}
+	\[\log \E[ \exp\{izL_j(t)\}] = t\phi_L(z)\]
+	is defined as\vspace{-0.1cm}
+	\begin{equation*}
+	\phi_L(z) = \begin{cases}
+	-\gamma^\alpha |z|^\alpha \left\{1 - i\beta (\sign z) \tan\left(\frac{\pi \alpha}{2}\right) \right\} + i \mu z& \text{for}\; \alpha \neq 1 \\
+	-\gamma|z|\left\{1 + i\beta \frac{2}{\pi}(\sign z)\log|z| \right\} +i\mu z & \text{for}\; \alpha = 1 \\
+	\end{cases}
+	\end{equation*}
+}
+
+\frame{
+	\frametitle{Stability condition}
+	Assumptions:
+	\begin{enumerate}[(i)]
+		\item The polynomials $a(\cdot)$ and $b(\cdot)$ have no common zeros
+		\item $l_L(\{0\}) = 0$ and $\int_{\mathbb{R}} (q^2\wedge 1)l_L(dz)<\infty$
+		\item All eigenvalues of A are distinct and have strictly negative real parts: $A$ has full rank, is diagonalisable with eigenvectors $U$ and eigenvalue matrix $D$: $\exp(At) = U\exp(Dt)U^{-1}$
+		\item To achieve stationarity in the L\'{e}vy case: $\sigma^2_t = \int_{-\infty}^{t}i(t, s) \text{d}U_s$, where $U_s$ is a L\'evy subordinator, $i(t,s) \stackrel{!}{=} i^{\ast}(t-s) >0$ and $i^{\ast}$ is derministic.
+	\end{enumerate}
+	\bigskip
+	Barndorff-Nielson et al. (2013), Benth et al. (2014)\\
+	\quad \hyperlink{arithModel}{\beamergotobutton{Model}}\quad\hyperlink{FEB4}{\beamergotobutton{FEB4}}
+}
 
 
 \section{The Bessembinder-Lemon Model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
+\frame[label=BLmodel]{
 	\frametitle{The Bessembinder-Lemon Model}
 	\begin{itemize}
 		\item One-period model
@@ -706,7 +954,7 @@ With Brownian motion $B_t$ instead of the L\'evy process $L_t$ we have Gaussian 
 			\item So $\gamma >0$ and the forward price increases with increasing skewness
 			\item This reflects the fact that the industry wants to hedge against price spikes
 		\end{itemize}
-	\end{itemize}
+	\end{itemize}\quad \hyperlink{MPR}{\beamergotobutton{Return}}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
