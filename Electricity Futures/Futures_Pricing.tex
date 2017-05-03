@@ -315,17 +315,17 @@ Before liberalisation: system based on calculatory costs, prices according to `c
 	\end{itemize}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-	\frametitle{EEX Options on Futures}
-	Traded products
-	\begin{itemize}
-		\item European-style Phelix Options which lead to opening of the corresponding Phelix Futures position if exercised 
-		\item Phelix Futures and Phelix Baseload or Peakload montly power index for the current month, the next nine months, eleven quarters and six years with cash settlement
-		\item Baseload and Peakload FR/DE Power Futures for the current month, next six months, seven quarters and six years with physical settlement, obliging for continuous delivery of 1MW during a month, quarter, a year
-		\item Actively exchange traded: 7 months, 5 quarters, 2-3 years
-		\item OTC transactions
-	\end{itemize}
-}
+%\frame{
+%	\frametitle{EEX Options on Futures}
+%	Traded products
+%	\begin{itemize}
+%		\item European-style Phelix Options which lead to opening of the corresponding Phelix Futures position if exercised 
+%		\item Phelix Futures and Phelix Baseload or Peakload montly power index for the current month, the next nine months, eleven quarters and six years with cash settlement
+%		\item Baseload and Peakload FR/DE Power Futures for the current month, next six months, seven quarters and six years with physical settlement, obliging for continuous delivery of 1MW during a month, quarter, a year
+%		\item Actively exchange traded: 7 months, 5 quarters, 2-3 years
+%		\item OTC transactions
+%	\end{itemize}
+%}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Classical Theory}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -441,7 +441,7 @@ It is defined as the difference, calculated at time $t$, between the forward $F(
 \pi(t, T) = F(t, T) - \E^P\{S(T)| \mathcal{F}_t\}
 \end{equation*}
 Here $\E^P$ is the expectation operator, under the historical measure $P$, with information up until time $t$ and $S(T)$ is the spot price at time $T$\\
- \quad \hyperlink{BLmodel}{\beamergotobutton{Bessembinder-Lemon Model}}\\
+ \quad \hyperlink{BLmodel}{\beamergotobutton{Bessembinder-Lemmon Model}}\\
   \quad \hyperlink{FEB4}{\beamergotobutton{FEB4}}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -449,31 +449,7 @@ Here $\E^P$ is the expectation operator, under the historical measure $P$, with 
 
 \section{Electricity futures pricing model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame[label=MPR]{
-	\frametitle{Market risk premium}
-	\begin{itemize}
-		\item Exposure to the market will differ both between producers and retailers as well as within their own group
-		\item For instance, a large producer will generally be exposed to market uncertainty for a longer period of time, perhaps determined by the remaining life of the assets, whilst retailers will tend to make decisions based on a shorter time scale
-		\item So the need for risk-diversification has a temporal dimension
-	\end{itemize} 
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-	\frametitle{}
-	\begin{itemize}
-		\item These differences in the desire to hedge positions are employed to explain the market risk premium and its sign 
-		\item Retailers are less incentivised to contract commodity forwards the further out we look into the market
-		\item In contrast, on the producers' side the need to hedge in the long-term does not fade away as quickly
-	\end{itemize}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-	\frametitle{}
-	\begin{itemize}
-		\item We associate situations where $\pi(t, T)>0$ with the fact that retailers' desire to cover their positions `outweighs' those of the producers resulting in a positive market risk premium
-		\item The mirror image is therefore one where the producers' desire to hedge their positions outweighs that of the retailers resulting in a negative market risk premium
-	\end{itemize}
-}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frame[label=arithModel]{
 	\frametitle{The electricity futures pricing model}
@@ -647,7 +623,7 @@ Benth et al. (2007)
 	\begin{itemize}
 		\item Two factor model feat. spikes and non-stationarity
 		\item MPR shows typical change of sign depending on time to maturity
-		\item At short end: positive MPR due to skewness in spot prices (Bessembinder \& Lemon (2002))
+		\item At short end: positive MPR due to skewness in spot prices (Bessembinder \& Lemmon (2002))
 		\item At long end (>2 months) negative MPR: Generators want to hedge uncertainty about future prices
 	\end{itemize}
 Open questions:
@@ -658,6 +634,43 @@ Open questions:
 		\item Does new data give similar results?
 	\end{itemize}
 }
+
+
+\section{Further Information}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\frame{
+%\frametitle{Further Information}
+%
+%BLABLABLA
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{For Further Reading}
+	\begin{thebibliography}{aaaaaaaaaaaaaaaaa}
+		\beamertemplatearticlebibitems
+		\bibitem{Benth:2014}
+		FE Benth, C Kl\"uppelberg, G M\"uller and L Vos (2014)
+		\newblock Futures pricing in electricity markets based on stable CARMA spot models
+		\newblock {\em Energy Economics} {44, 392-406}
+		\beamertemplatearticlebibitems
+		\bibitem{Barndorff:2013}
+		OE Barndorff-Nielsen, FE Benth and AED Veraart (2013)
+		\newblock Modelling energy spot prices by volatility modulated L\'evy-driven Volterra processes
+		\newblock{\em Bernoulli} {\bf 19}(3), 803-845 
+		\beamertemplatearticlebibitems
+		\bibitem{Bessembinder:2002}
+		H Bessembinder and ML Lemmon (2002)
+		\newblock Equilibrium pricing and potimal hedging in electricity forward markets
+		\newblock {\em Journal of Finance} {\bf 57}(3), 1347-1382
+	\end{thebibliography}
+}
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frame[label=SEAS]{
@@ -774,10 +787,10 @@ Open questions:
 }
 
 
-\section{The Bessembinder-Lemon Model}
+\section{The Bessembinder-Lemmon Model}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \frame[label=BLmodel]{
-	\frametitle{The Bessembinder-Lemon Model}
+	\frametitle{The Bessembinder-Lemmon Model}
 	\begin{itemize}
 		\item One-period model
 		\item Power companies are able to forecast demand in the immediate future with precision
@@ -954,68 +967,39 @@ Open questions:
 			\item So $\gamma >0$ and the forward price increases with increasing skewness
 			\item This reflects the fact that the industry wants to hedge against price spikes
 		\end{itemize}
-	\end{itemize}\quad \hyperlink{MPR}{\beamergotobutton{Return}}
+	\end{itemize}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\frame{
+	\frametitle{Market risk premium}
+	\begin{itemize}
+		\item Exposure to the market will differ both between producers and retailers as well as within their own group
+		\item For instance, a large producer will generally be exposed to market uncertainty for a longer period of time, perhaps determined by the remaining life of the assets, whilst retailers will tend to make decisions based on a shorter time scale
+		\item So the need for risk-diversification has a temporal dimension
+	\end{itemize} 
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item These differences in the desire to hedge positions are employed to explain the market risk premium and its sign 
+		\item Retailers are less incentivised to contract commodity forwards the further out we look into the market
+		\item In contrast, on the producers' side the need to hedge in the long-term does not fade away as quickly
+	\end{itemize}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frame{
+	\frametitle{}
+	\begin{itemize}
+		\item We associate situations where $\pi(t, T)>0$ with the fact that retailers' desire to cover their positions `outweighs' those of the producers resulting in a positive market risk premium
+		\item The mirror image is therefore one where the producers' desire to hedge their positions outweighs that of the retailers resulting in a negative market risk premium
+	\end{itemize}
+\quad \hyperlink{MPR}{\beamergotobutton{Return}}
+}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Further Information}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-\frametitle{Further Information}
-
-BLABLABLA
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-\frametitle{For Further Reading}
-\begin{thebibliography}{aaaaaaaaaaaaaaaaa}
-\beamertemplatearticlebibitems
-\bibitem{Oetiker:2006}
-Tobias Oetiker, Hubert Partl, Irene Hyna and Elisabeth Schlegl
-\newblock{\em The Not So Short Introduction to \LaTeX 2e}
-\newblock available on \href{http://www.ctan.org/tex-archive/info/lshort/english/}{www.ctan.org}, 2008
-\beamertemplatearticlebibitems
-\bibitem{Pakin:2008}
-Scott Pakin
-\newblock{\em The Comprehensive \LaTeX Symbol List}
-\newblock available on \href{http://www.ctan.org/tex-archive/info/symbols/comprehensive/}{www.ctan.org}, 2008
-\beamertemplatebookbibitems
-\bibitem{Eckel:2004}
-Frank Mittelbach and Michel Goossens
-\newblock {\em The \LaTeX{ }Companion -- 2nd ed.}
-\newblock Addison-Wesley, 2004
-\end{thebibliography}
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-\frametitle{For Further Reading}
-\begin{thebibliography}{aaaaaaaaaaaaaaaaa}
-\beamertemplatearticlebibitems
-\bibitem{Trettin:2007}
-Mark Trettin and Jürgen Fenn
-\newblock{\em An essential guide to \LaTeX 2e usage}
-\newblock available on \href{http://tug.ctan.org/cgi-bin/ctanPackageInformation.py?id=l2tabu-english}{www.ctan.org}, 2007
-\beamertemplatearticlebibitems
-\bibitem{wiki:index}
-Wikipedia Wiki Books
-\newblock{\em LaTeX-Wörterbuch: InDeX}
-\newblock available on \href{http://de.wikibooks.org/}{www.wikipedia.de}
-\beamertemplatearticlebibitems
-\bibitem{Tantau:2007}
-Till Tantau
-\newblock{\em User Guide to the Beamer Class, Version 3.07}
-\newblock available on \href{http://latex-beamer.sourceforge.net}{www.sourceforge.net}, 2007
-\end{thebibliography}
-}
 
 % Define the end of the document:
 \end{document}
