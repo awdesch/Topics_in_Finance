@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.2.4)  3 MAY 2017 20:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.13)  4 MAY 2017 09:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1751,10 +1751,6 @@ File: Figures/SEAS.png Graphic file (type png)
 <use Figures/SEAS.png>
 Package pdftex.def Info: Figures/SEAS.png used on input line 700.
 (pdftex.def)             Requested size: 189.40909pt x 150.86478pt.
-
-Overfull \vbox (5.07858pt too high) detected at line 700
- []
-
 pdfTeX warning (ext4): destination with the same identifier (name{Navigation3})
  has been already used, duplicate ignored
 <to be read again> 
@@ -1767,155 +1763,182 @@ l.700 }
 l.700 }
         [3
 
- <./Figures/SEAS.png>]pdfTeX warning (ext4): destination with the same identifi
-er (name{Navigation4}) has been already used, duplicate ignored
+ <./Figures/SEAS.png>]
+<Figures/EXAAseas.png, id=397, 1902.10625pt x 1033.8625pt>
+File: Figures/EXAAseas.png Graphic file (type png)
+
+<use Figures/EXAAseas.png>
+Package pdftex.def Info: Figures/EXAAseas.png used on input line 709.
+(pdftex.def)             Requested size: 266.29306pt x 144.73976pt.
+File: qletlogo.pdf Graphic file (type pdf)
+ <use qletlogo.pdf>
+Package pdftex.def Info: qletlogo.pdf used on input line 709.
+(pdftex.def)             Requested size: 9.92516pt x 10.26393pt.
+
+Overfull \vbox (20.86655pt too high) detected at line 709
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation4})
+ has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.719 }
+l.709 }
        pdfTeX warning (ext4): destination with the same identifier (name{page.4
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.719 }
+l.709 }
         [4
 
+ <./Figures/EXAAseas.png>]pdfTeX warning (ext4): destination with the same iden
+tifier (name{Navigation5}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.729 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.5
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.729 }
+        [5
+
 ]
-Overfull \hbox (115.85312pt too wide) detected at line 753
+Overfull \hbox (115.85312pt too wide) detected at line 763
 [] \OT1/cmss/m/n/10.95 = []   \T1/cmss/bx/n/10.95 e[] \OT1/cmss/m/n/10.95 = [] 
   \T1/cmss/bx/n/10.95 b \OT1/cmss/m/n/10.95 = []  \T1/cmss/bx/n/10.95 X[] \OT1/
 cmss/m/n/10.95 = []
  []
 
-pdfTeX warning (ext4): destination with the same identifier (name{Navigation5})
+pdfTeX warning (ext4): destination with the same identifier (name{Navigation6})
  has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.753 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.5
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.753 }
-        [5
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation6}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.773 }
+l.763 }
        pdfTeX warning (ext4): destination with the same identifier (name{page.6
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.773 }
+l.763 }
         [6
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{Navigation7}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.787 }
+l.783 }
        pdfTeX warning (ext4): destination with the same identifier (name{page.7
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.787 }
-        [7
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation1}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.801 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.1
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.801 }
-        [1
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation2}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.816 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.2
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.816 }
-        [2
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation3}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.825 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.3
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.825 }
-        [3
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation4}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.838 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.4
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.838 }
-        [4
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation5}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.854 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.5
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.854 }
-        [5
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation6}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.865 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.6
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.865 }
-        [6
-
-]pdfTeX warning (ext4): destination with the same identifier (name{Navigation7}
-) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.880 }
-       pdfTeX warning (ext4): destination with the same identifier (name{page.7
-}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.880 }
+l.783 }
         [7
 
 ]pdfTeX warning (ext4): destination with the same identifier (name{Navigation8}
 ) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.894 }
+l.797 }
        pdfTeX warning (ext4): destination with the same identifier (name{page.8
 }) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.894 }
+l.797 }
+        [8
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation1}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.811 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.1
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.811 }
+        [1
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation2}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.826 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.2
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.826 }
+        [2
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation3}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.835 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.3
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.835 }
+        [3
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation4}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.848 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.4
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.848 }
+        [4
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation5}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.864 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.5
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.864 }
+        [5
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation6}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.6
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.875 }
+        [6
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation7}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.890 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.7
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.890 }
+        [7
+
+]pdfTeX warning (ext4): destination with the same identifier (name{Navigation8}
+) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.904 }
+       pdfTeX warning (ext4): destination with the same identifier (name{page.8
+}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.904 }
         [8
 
 ] [9
@@ -1923,7 +1946,7 @@ l.894 }
 ] [10
 
 ]
-Overfull \hbox (3.5547pt too wide) detected at line 936
+Overfull \hbox (3.5547pt too wide) detected at line 946
  \OT1/mathkerncmss/m/sl/10.95 P[] \OT1/cmss/m/n/10.95 = [](\OT1/mathkerncmss/m/
 sl/10.95 P[]\OT1/cmss/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ [] [] \OML/cmm/m/it/1
 0.95 ;
@@ -1940,7 +1963,7 @@ sl/10.95 P[]\OT1/cmss/m/n/10.95 ) \OMS/cmsy/m/n/10.95 ^^@ [] [] \OML/cmm/m/it/1
 ] [15
 
 ]
-Package atenddvi Info: Last page = 54.
+Package atenddvi Info: Last page = 55.
  [16
 
 ]
@@ -1953,11 +1976,11 @@ Package atenddvi Info: Last page = 54.
 \tf@snm=\write8
 \openout8 = `Futures_Pricing.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1005.
-Package atveryend Info: Executing hook `AfterLastShipout' on input line 1005.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1015.
+Package atveryend Info: Executing hook `AfterLastShipout' on input line 1015.
  (./Futures_Pricing.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1005.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1005.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1015.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1015.
 
 Package rerunfilecheck Info: File `Futures_Pricing.out' has not changed.
 (rerunfilecheck)             Checksum: 0370510D2D632AFECF1B7A79A361C55C;575.
@@ -1966,20 +1989,20 @@ Package rerunfilecheck Info: File `Futures_Pricing.out' has not changed.
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1005.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1015.
  )
 (\end occurred inside a group at level 1)
 
 ### simple group (level 1) entered at line 1061 ({)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 27782 strings out of 493014
- 522845 string characters out of 6133352
+ 27789 strings out of 493014
+ 522974 string characters out of 6133351
  748187 words of memory out of 5000000
- 30706 multiletter control sequences out of 15000+600000
+ 30712 multiletter control sequences out of 15000+600000
  29052 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,16n,55p,15175b,3559s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,16n,55p,15175b,3569s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm
 -super-t1.enc}</usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/c
 m/cmex10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm
@@ -2009,10 +2032,10 @@ exmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2016/tex
 mf-dist/fonts/type1/public/cm-super/sfsx0800.pfb></usr/local/texlive/2016/texmf
 -dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2016/texmf-d
 ist/fonts/type1/public/cm-super/sfsx1440.pfb>
-Output written on Futures_Pricing.pdf (54 pages, 2569435 bytes).
+Output written on Futures_Pricing.pdf (55 pages, 3921076 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 500 compressed objects within 5 object streams
+ 642 PDF objects out of 1000 (max. 8388607)
+ 506 compressed objects within 6 object streams
  66 named destinations out of 1000 (max. 500000)
- 196 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
 

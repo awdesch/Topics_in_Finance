@@ -10,4 +10,4 @@
 \beamer@sectionintoc {8}{Empirical Results}{2}{0}{8}
 \beamer@sectionintoc {9}{Conclusions}{3}{0}{9}
 \beamer@sectionintoc {10}{Further Information}{2}{0}{10}
-\beamer@sectionintoc {11}{The Bessembinder-Lemmon Model}{8}{0}{11}
+\beamer@sectionintoc {11}{The Bessembinder-Lemmon Model}{9}{0}{11}
