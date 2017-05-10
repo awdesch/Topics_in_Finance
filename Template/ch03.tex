@@ -1,0 +1,34 @@
+\section{The Model | Methodology} \label{sec:03}
+Define the model, give some equations and explain them:
+\begin{equation}
+TSO(\tau_1, \tau_2) = \int_{\tau_1}^{\tau_2} \frac{WPL(s)}{C(s)}ds = \int_{\tau_1}^{\tau_2} U(s)ds.
+\end{equation}
+
+\subsection{Subsection}
+Add aligned equations:
+\begin{align}
+U_t &= \Lambda_t + Y_t\\
+d\Lambda_t &= \Lambda_t dt\\
+Y_t &= {\bf b}^\top {\bf X}_t\\
+d{\bf X}_t &= ({\bf A}{\bf X}_t +  {\bf e}_p\sigma_t\theta_t)dt +  {\bf e}_p \sigma_t dB_t^{\theta},
+\end{align}
+with matrices and vectors
+\[{\bf A} = \left( \begin{array}{ccccc}
+0 & 1 & 0 & \ldots& 0\\
+0 & 0 & 1 & \ddots& \vdots\\
+\vdots &  & \ddots & \ddots &0\\
+0 & \ldots & \ldots & 0 & 1\\
+-\alpha_p & -\alpha_{p-1} & \ldots & & -\alpha_1 \end{array} \right)\quad {\bf e}_p =  \left( \begin{array}{c} 
+0\\
+0\\
+\vdots\\
+0\\
+1
+\end{array} \right) \]
+Integrals:
+\begin{align*}
+U_s &=  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)){\bf x}du +  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf A}(s-u))\Lambda_u du   \\
+&+  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)) {\bf e}_p \sigma_u dB_u^\theta
+\end{align*}
+
+

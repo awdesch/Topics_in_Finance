@@ -1,0 +1,717 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2017.1.13)  10 MAY 2017 11:27
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**ch03.tex
+(./ch03.tex
+LaTeX2e <2016/03/31>
+Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
+! Undefined control sequence.
+l.1 \section
+            {The Model | Methodology}\label{sec:07}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \section{T
+              he Model | Methodology}\label{sec:07}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no | in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no D in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no : in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--3
+[]
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 3.
+
+Overfull \hbox (201.22427pt too wide) detected at line 5
+\OML/cmm/m/it/10 TSO\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^\[]; ^^\[]\OT1/cmr/m/n/
+10 ) = [][] []\OML/cmm/m/it/10 ds \OT1/cmr/m/n/10 = [][] \OML/cmm/m/it/10 U\OT1
+/cmr/m/n/10 (\OML/cmm/m/it/10 s\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 ds:
+ []
+
+! Undefined control sequence.
+l.7 \subsection
+               {Subsection}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \subsection{S
+                 ubsection}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no S in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no : in font nullfont!
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9 \begin{align}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no U in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.10 U_
+       t &= \Lambda_t + Y_t\\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.10 U_t &
+          = \Lambda_t + Y_t\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.11 d\Lambda_t &
+                 = \Lambda_t dt\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.12 Y_t &
+          = {\bf b}^\top {\bf X}_t\\
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.12 Y_t &= {\bf
+                 b}^\top {\bf X}_t\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.12 Y_t &= {\bf b}^\top {\bf
+                              X}_t\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 d{\bf
+           X}_t &= ({\bf A}{\bf X}_t +  {\bf e}_p\sigma_t\theta_t)dt +  {\bf...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.13 d{\bf X}_t &
+                 = ({\bf A}{\bf X}_t +  {\bf e}_p\sigma_t\theta_t)dt +  {\bf...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.13 d{\bf X}_t &= ({\bf
+                         A}{\bf X}_t +  {\bf e}_p\sigma_t\theta_t)dt +  {\bf...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 d{\bf X}_t &= ({\bf A}{\bf
+                                X}_t +  {\bf e}_p\sigma_t\theta_t)dt +  {\bf...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 d{\bf X}_t &= ({\bf A}{\bf X}_t +  {\bf
+                                             e}_p\sigma_t\theta_t)dt +  {\bf...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.13 ..._t +  {\bf e}_p\sigma_t\theta_t)dt +  {\bf
+                                                   e}_p \sigma_t dB_t^{\theta},
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \end{align}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.14 \end{align}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 7--16
+[]
+ []
+
+
+Overfull \hbox (14.07635pt too wide) in paragraph at lines 7--16
+[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (18.24309pt too wide) in paragraph at lines 7--16
+\OT1/cmr/m/n/10 ^^C[] +
+ []
+
+
+Overfull \hbox (9.3264pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 Y[][] 
+ []
+
+
+Overfull \hbox (26.22566pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 d\OT1/cmr/m/n/10 ^^C[] =
+ []
+
+
+Overfull \hbox (19.28127pt too wide) in paragraph at lines 7--16
+\OT1/cmr/m/n/10 ^^C[]\OML/cmm/m/it/10 dt[] 
+ []
+
+
+Overfull \hbox (19.88191pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 Y[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (22.84724pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 b[]X[][] 
+ []
+
+
+Overfull \hbox (27.56595pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 dX[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (30.97229pt too wide) in paragraph at lines 7--16
+\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 AX[] \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (47.21155pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 e[]^^[[]^^R[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 dt \OT1/cmr/m/n
+/10 +
+ []
+
+
+Overfull \hbox (39.10732pt too wide) in paragraph at lines 7--16
+\OML/cmm/m/it/10 e[]^^[[]dB[];$
+ []
+
+! Undefined control sequence.
+l.16 \[{\bf
+            A} = \left( \begin{array}{ccccc}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+l.21 ... & -\alpha_1 \end{array} \right)\quad {\bf
+                                                   e}_p =  \left( \begin{arr...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+l.27 \end{array} \right), \quad {\bf
+                                     b} =   \left( \begin{array}{c}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+! Undefined control sequence.
+l.33 \end{array} \right) \quad  {\bf
+                                     X}_t =   \left( \begin{array}{c}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (314.25032pt too wide) detected at line 39
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 = []  \OML/cmm/m/it/10 e[] \OT1/cmr/m/n/10 =
+ [] \OML/cmm/m/it/10 ;  b \OT1/cmr/m/n/10 = []  \OML/cmm/m/it/10 X[] \OT1/cmr/m
+/n/10 = [] \OML/cmm/m/it/10 ;
+ []
+
+Missing character: There is no I in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no : in font nullfont!
+
+! LaTeX Error: Environment align* undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \begin{align*}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no U in font nullfont!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.42 U_
+       s &=  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)){\bf x}du +  \i...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.42 U_s &
+          =  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)){\bf x}du +  \i...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.42 ...=  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf
+                                                   A}(s-u)){\bf x}du +  \int...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...\tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)){\bf
+                                                   x}du +  \int_t^{s}\tilde{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...+  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf
+                                                   A}(s-u))\Lambda_u du +  \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...+  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf
+                                                   A}(s-u)) {\bf e}_p \sigma...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.42 ...tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)) {\bf
+                                                   e}_p \sigma_u \theta_u d_u\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+<recently read> &
+                 
+l.43 &
+      + \frac{1}{2}(1-\lambda)  \int_t^{s}\tilde{U_u}^{\eta_2}\exp({\bf A}(s...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.43 ...)  \int_t^{s}\tilde{U_u}^{\eta_2}\exp({\bf
+                                                   A}(s-u)) {\bf e}_p^\top \...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.43 ...tilde{U_u}^{\eta_2}\exp({\bf A}(s-u)) {\bf
+                                                   e}_p^\top \sigma_u^2 {\bf...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.43 ...bf A}(s-u)) {\bf e}_p^\top \sigma_u^2 {\bf
+                                                   e}_p du +  \int_t^{s}\til...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.43 ...+  \int_t^{s}\tilde{U_u}^{\eta_1}\exp({\bf
+                                                   A}(s-u)) {\bf e}_p \sigma...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.43 ...tilde{U_u}^{\eta_1}\exp({\bf A}(s-u)) {\bf
+                                                   e}_p \sigma_u dB_u^\theta
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \begin{document} ended by \end{align*}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.44 \end{align*}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.44 \end{align*}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (14.82983pt too wide) in paragraph at lines 39--53
+  $[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (77.87402pt too wide) in paragraph at lines 39--53
+[][] [][] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 s \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (37.9249pt too wide) in paragraph at lines 39--53
+\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10 xdu \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (77.87402pt too wide) in paragraph at lines 39--53
+[][] [][] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 s \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (44.38213pt too wide) in paragraph at lines 39--53
+\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ))^^C[]\OML/cmm/m/it/10 du \OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (77.87402pt too wide) in paragraph at lines 39--53
+[][] [][] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 s \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (54.0786pt too wide) in paragraph at lines 39--53
+\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10 e[]^^[[]^^R[]d[][] 
+ []
+
+
+Overfull \hbox (7.7778pt too wide) in paragraph at lines 39--53
+\OT1/cmr/m/n/10 +
+ []
+
+
+Overfull \hbox (23.05284pt too wide) in paragraph at lines 39--53
+[]\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (89.26291pt too wide) in paragraph at lines 39--53
+\OML/cmm/m/it/10 ^^U\OT1/cmr/m/n/10 ) [][] [][] [](\OML/cmm/m/it/10 A\OT1/cmr/m
+/n/10 (\OML/cmm/m/it/10 s \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (63.8367pt too wide) in paragraph at lines 39--53
+\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10 e[]^^[[]e[]du \OT1/cmr/m/n
+/10 +
+ []
+
+
+Overfull \hbox (77.87402pt too wide) in paragraph at lines 39--53
+[][] [][] []\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 (\OML/cmm/m/it/1
+0 s \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (51.74118pt too wide) in paragraph at lines 39--53
+\OML/cmm/m/it/10 u\OT1/cmr/m/n/10 ))\OML/cmm/m/it/10 e[]^^[[]dB[]$ 
+ []
+
+)
+! Emergency stop.
+<*> ch03.tex
+            
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 12 strings out of 493014
+ 175 string characters out of 6133351
+ 59601 words of memory out of 5000000
+ 3655 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 18i,9n,12p,248b,92s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
