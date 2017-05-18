@@ -450,12 +450,15 @@ sqrt(ifelse(x >= 0, x, NA))	# no warning
 \begin{rc}
 col.means <- function(input){
 	n    = nrow(input)
-	ones = 
-	return((rep(1,n) %*% input)/n)
+	ones = rep(1,n)
+	return((ones %*% input)/n)
 }
 
 colMeans(matrix(1:12,3,4))
+2  5  8 11
 col.means(matrix(1:12,3,4))
+     [,1] [,2] [,3] [,4]
+[1,]    2    5    8   11
 \end{rc}
 	
 }
