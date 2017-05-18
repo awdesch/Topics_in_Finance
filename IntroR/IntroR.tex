@@ -125,6 +125,38 @@ in NZ
 \end{columns}	
 }
 
+\frame[containsverbatim]{
+	\frametitle{R help}
+	\vspace{-0.3cm}\begin{rc}
+help () #
+help(sin) # help for sin()
+?sin # help for sin
+help.start() # HTML help
+library() # show installed libraries 
+library(help="<package>") # or without "" 
+help.search("sin")
+?? sin # same as help.search("sin")
+	\end{rc}
+	
+}
+
+\frame[containsverbatim]{
+	\frametitle{R packages}
+	\vspace{-0.3cm}\begin{rc}
+# download and install
+install.packages("zooreg")
+# update local packages
+update.packages()
+# show installed libraries
+libraries()
+# load library
+library(name,lib.loc=[location])
+# load library in functions require () # return TRUE or FALSE
+	\end{rc}
+	
+}
+
+
 % David's Section
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic R Operations}
@@ -434,7 +466,26 @@ col.means(matrix(1:12,3,4))
 Write a function that calculates the {\bf column means} of a dataset using the {\bf \texttt{for} loop}.	
 }
 
-\section{Data}
+\section{Data frames}
+
+\frame[containsverbatim]{
+	\frametitle{Date Time Types}
+	Several DateTime Classes: POSIXct, POSIXlt, Date\\
+	POSIXlt: sec, min, hour, mday, mon, year, wday, yday
+	\begin{rc}
+Sys.time() # clock time as POSIXct
+date() # Date without a time
+s = c("23.05.1984", "01.01.2000", "03.05.1256")
+d = as.Date(s, "%d.%m.%Y")
+difftime(Sys.time(), d)
+format(d, "%Y")
+
+dP = as.POSIXlt(d)
+months(dP)
+weekdays(dP)
+quarters(dP)
+	\end{rc}
+}
 
 \frame[containsverbatim]{
 	\frametitle{Load datasets}
@@ -442,7 +493,9 @@ Write a function that calculates the {\bf column means} of a dataset using the {
 	\begin{rc}
 setwd("C:/...")
 setwd("/Users/...")
-data <- read.csv("DAX30.csv", sep=",") # data set is a CSV-file
+data <- read.csv("name.csv", sep=",")	# CSV-file
+data <- read.table("name.txt", sep="")	# txt-file
+load("name.RData")						# RData-file
 	\end{rc}
 }
 
