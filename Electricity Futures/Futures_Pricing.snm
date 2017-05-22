@@ -1,5 +1,7 @@
-\beamer@slide {MPR<1>}{8}
-\beamer@slide {MPR}{8}
+\beamer@slide {MPR<1>}{12}
+\beamer@slide {MPR}{12}
+\beamer@slide {BLmodel<1>}{1}
+\beamer@slide {BLmodel}{1}
 \beamer@slide {arithModel<1>}{1}
 \beamer@slide {arithModel}{1}
 \beamer@slide {Ft<1>}{4}
@@ -15,5 +17,3 @@
 \beamer@slide {Model<1>}{5}
 \beamer@slide {Model}{5}
 \beamer@slide {eq:no16}{6}
-\beamer@slide {BLmodel<1>}{1}
-\beamer@slide {BLmodel}{1}

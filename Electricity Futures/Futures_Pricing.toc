@@ -5,9 +5,9 @@
 \beamer@sectionintoc {3}{Economics of Spot Prices}{5}{0}{3}
 \beamer@sectionintoc {4}{Futures Market}{6}{0}{4}
 \beamer@sectionintoc {5}{Classical Theory}{2}{0}{5}
-\beamer@sectionintoc {6}{Electricity futures pricing model}{9}{0}{6}
-\beamer@sectionintoc {7}{Data}{6}{0}{7}
-\beamer@sectionintoc {8}{Empirical Results}{2}{0}{8}
-\beamer@sectionintoc {9}{Conclusions}{3}{0}{9}
-\beamer@sectionintoc {10}{Further Information}{2}{0}{10}
-\beamer@sectionintoc {11}{The Bessembinder-Lemmon Model}{9}{0}{11}
+\beamer@sectionintoc {6}{The Bessembinder-Lemmon Model}{13}{0}{6}
+\beamer@sectionintoc {7}{Electricity futures pricing model}{17}{0}{7}
+\beamer@sectionintoc {8}{Data}{6}{0}{8}
+\beamer@sectionintoc {9}{Empirical Results}{2}{0}{9}
+\beamer@sectionintoc {10}{Conclusions}{3}{0}{10}
+\beamer@sectionintoc {11}{Further Information}{2}{0}{11}
